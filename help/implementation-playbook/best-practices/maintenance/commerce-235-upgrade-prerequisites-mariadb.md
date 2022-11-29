@@ -43,7 +43,7 @@ You can convert tables on one node in your cluster. The changes will replicate t
    - Identify tables to be converted from compact to dynamic format.
 
      ```mysql
-     SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format 'Compact';
+     SELECT table_name, row_format FROM information_schema.tables WHERE table_schema=DATABASE() and row_format="Compact";
      ```
 
    - Determine the table sizes so you can schedule the conversion work.
